@@ -17,12 +17,8 @@
                 {/if}
                 {$video->url}
             {/strip}">
-            {if !isset($video->title)}
-                {if $video->ie_key == YoutubePlaylist}
-                    Playlist
-                {else}
-                    Video
-                {/if}
+            {if !isset($video->title) and $video->ie_key == YoutubePlaylist}
+                Playlist
             {else}
                 {$video->title}
             {/if}

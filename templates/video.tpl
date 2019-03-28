@@ -27,7 +27,7 @@
         {/if}
         <select name="format" id="format" class="formats monospace">
             <optgroup label="{t}Generic formats{/t}">
-                <option value="{$defaultFormat}">
+                <option value="best{$protocol}">
                     {strip}
                         {t}Best{/t} ({$video->ext})
                     {/strip}
@@ -37,7 +37,7 @@
                         {t}Remux best video with best audio{/t}
                     </option>
                 {/if}
-                <option value="{$defaultFormat|replace:best:worst}">
+                <option value="worst{$protocol}">
                     {t}Worst{/t}
                 </option>
             </optgroup>
